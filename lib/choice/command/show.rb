@@ -15,7 +15,13 @@ module Choice
         <<-EOS
 グループ名: #{group_name}
 メンバー: #{members.join(', ')}
+
+次は「#{members[cursor]}」から選ばれます。
         EOS
+      end
+
+      def cursor
+        store.get(cursor_key).to_i % members.size
       end
     end
   end
