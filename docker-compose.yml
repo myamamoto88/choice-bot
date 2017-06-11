@@ -4,4 +4,5 @@ services:
   bot:
     build: .
     environment:
-      SLACK_TOKEN:
+      BOT_TOKEN:
+      BOT_ID:
