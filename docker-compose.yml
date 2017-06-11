@@ -8,5 +8,9 @@ services:
       BOT_ID:
       # redisから取得した文字列を加工しようとすると「invalid byte sequence in US-ASCII」等のエラーとなるため追加した
       RUBYOPT: "-KU -E utf-8:utf-8"
+    restart: always
   redis:
     image: redis:latest
+    restart: always
+    volumes:
+      - ./data:/data
