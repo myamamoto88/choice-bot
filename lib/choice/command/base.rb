@@ -1,3 +1,6 @@
+require 'redis'
+require 'json'
+
 module Choice
   module Command
     class Base
@@ -15,14 +18,25 @@ module Choice
 
       attr_reader :args
 
-      def action
-      end
+      def action; end
+      def message; end
 
-      def message
-      end
-
-      def key
+      def group_name
         args[0]
+      end
+
+      def set(key, value)
+        store.set(key, value.to_json)
+      end
+
+      def get(key)
+        store.get(key)
+      end
+
+      private
+
+      def store
+        @client ||= Redis.new(url: 'redis://redis:6379')
       end
     end
   end

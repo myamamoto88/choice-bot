@@ -6,3 +6,5 @@ services:
     environment:
       BOT_TOKEN:
       BOT_ID:
+  redis:
+    image: redis:latest

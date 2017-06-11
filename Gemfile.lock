@@ -23,6 +23,7 @@ GEM
     minitest (5.10.2)
     multi_json (1.12.1)
     multipart-post (2.0.0)
+    redis (3.3.3)
     slack-api (1.5.0)
       faraday (~> 0.11)
       faraday_middleware (~> 0.10.0)
@@ -49,6 +50,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  redis
   slappy
 
 BUNDLED WITH

@@ -4,11 +4,11 @@ module Choice
       private
 
       def action
-
+        store.set(group_name, members.shuffle)
       end
 
       def message
-        "Success initialize. members: #{members.join(',')}"
+        "「#{group_name}」の登録を完了しました。"
       end
 
       def members
