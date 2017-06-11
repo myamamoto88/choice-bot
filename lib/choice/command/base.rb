@@ -25,12 +25,12 @@ module Choice
         args[0]
       end
 
-      def member_key
-        "#{group_name}:member"
+      def member_key(key = group_name)
+        "#{key}:member"
       end
 
-      def cursor_key
-        "#{group_name}:cursor"
+      def cursor_key(key = group_name)
+        "#{key}:cursor"
       end
 
       def set(key, value)
