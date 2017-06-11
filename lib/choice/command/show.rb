@@ -4,7 +4,7 @@ module Choice
       private
 
       def members
-        JSON.parse(store.get(group_name))
+        JSON.parse(store.get(member_key))
       end
 
       def message

@@ -25,6 +25,14 @@ module Choice
         args[0]
       end
 
+      def member_key
+        "#{group_name}:member"
+      end
+
+      def cursor_key
+        "#{group_name}:cursor"
+      end
+
       def set(key, value)
         store.set(key, value.to_json)
       end
