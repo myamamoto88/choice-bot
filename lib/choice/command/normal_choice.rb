@@ -7,7 +7,7 @@ module Choice
         count.times.each do |_|
           cursor = get(cursor_key).to_i
           cursor = (cursor + 1) % members.size
-          store.set(cursor_key, cursor)
+          set(cursor_key, cursor)
 
           result << members[cursor]
         end

@@ -8,7 +8,7 @@ module Choice
 
         members[source_index], members[destination_index] = members[destination_index], members[source_index]
 
-        store.set(member_key, members)
+        set(member_key, members)
       end
 
       def message

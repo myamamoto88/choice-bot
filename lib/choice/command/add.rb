@@ -5,7 +5,7 @@ module Choice
 
       def action
         members << new_members
-        store.set(member_key, members.flatten)
+        set(member_key, members.flatten)
       end
 
       def message

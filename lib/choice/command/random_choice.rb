@@ -14,7 +14,7 @@ module Choice
             member = members[next_cursor]
           end
           result << member
-          store.set(cursor_key, next_cursor)
+          set(cursor_key, next_cursor)
         end
       end
 
@@ -51,7 +51,7 @@ module Choice
       def shuffle
         @shuffled = true
         @members = members.shuffle
-        store.set(member_key, members)
+        set(member_key, members)
       end
 
       def shuffle?

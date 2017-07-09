@@ -6,8 +6,8 @@ module Choice
       def action
         return if invalid?
 
-        store.set(member_key(destination), source_members.shuffle)
-        store.set(cursor_key(destination), 0)
+        set(member_key(destination), source_members.shuffle)
+        set(cursor_key(destination), 0)
       end
 
       def message

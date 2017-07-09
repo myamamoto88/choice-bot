@@ -4,8 +4,8 @@ module Choice
       private
 
       def action
-        store.set(member_key, after_members)
-        store.set(cursor_key, 0)
+        set(member_key, after_members)
+        set(cursor_key, 0)
       end
 
       def before_members

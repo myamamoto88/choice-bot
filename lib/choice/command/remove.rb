@@ -9,7 +9,7 @@ module Choice
           return
         end
 
-        store.set(member_key, members - targets)
+        set(member_key, members - targets)
       end
 
       def message

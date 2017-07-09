@@ -4,8 +4,8 @@ module Choice
       private
 
       def action
-        store.set(member_key, members.shuffle)
-        store.set(cursor_key, 0)
+        set(member_key, members.shuffle)
+        set(cursor_key, 0)
       end
 
       def message
