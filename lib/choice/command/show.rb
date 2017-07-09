@@ -16,7 +16,7 @@ module Choice
 グループ名: #{group_name}
 メンバー: #{members.join(', ')}
 
-次は「#{members[cursor]}」から選ばれます。
+「#{members[cursor]}」まで選ばれました。
         EOS
       end
 
