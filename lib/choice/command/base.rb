@@ -38,7 +38,9 @@ module Choice
       end
 
       def get(key)
-        store.get(key)
+        value = store.get(key)
+        raise ::Choice::Executor::NotFoundKey, key if value.nil?
+				value
       end
 
       private
