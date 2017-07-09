@@ -1,5 +1,6 @@
 require 'choice/command/base'
 require 'choice/command/init'
+require 'choice/command/random_choice'
 
 module Choice
   module Command
