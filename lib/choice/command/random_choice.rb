@@ -23,7 +23,7 @@ module Choice
       end
 
       def current_cursor
-        store.get(cursor_key).to_i
+        get(cursor_key).to_i
       end
 
       def next_cursor
@@ -45,7 +45,7 @@ module Choice
       end
 
       def members
-        @members ||= JSON.parse(store.get(member_key))
+        @members ||= JSON.parse(get(member_key))
       end
 
       def shuffle

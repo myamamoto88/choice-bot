@@ -5,7 +5,7 @@ module Choice
 
       def action
         count.times.each do |_|
-          cursor = store.get(cursor_key).to_i
+          cursor = get(cursor_key).to_i
           cursor = (cursor + 1) % members.size
           store.set(cursor_key, cursor)
 
@@ -26,7 +26,7 @@ module Choice
       end
 
       def members
-        @members ||= JSON.parse(store.get(member_key))
+        @members ||= JSON.parse(get(member_key))
       end
     end
   end

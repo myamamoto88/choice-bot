@@ -4,7 +4,7 @@ module Choice
       private
 
       def members
-        _members = store.get(member_key)
+        _members = get(member_key)
         return [] if _members.blank?
         JSON.parse(_members)
       end
@@ -21,7 +21,7 @@ module Choice
       end
 
       def cursor
-        store.get(cursor_key).to_i % members.size
+        get(cursor_key).to_i % members.size
       end
     end
   end

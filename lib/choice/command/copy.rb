@@ -29,7 +29,7 @@ module Choice
       end
 
       def source_members
-        member_json_string = store.get(member_key(source))
+        member_json_string = get(member_key(source))
         return [] if member_json_string.blank?
         JSON.parse(member_json_string)
       end

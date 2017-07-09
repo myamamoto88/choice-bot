@@ -40,7 +40,7 @@ module Choice
 
       def members
         @members ||= begin
-          _members = store.get(member_key)
+          _members = get(member_key)
           if _members.blank?
             []
           else

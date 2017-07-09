@@ -17,7 +17,7 @@ module Choice
       end
 
       def members
-        @members ||= JSON.parse(store.get(member_key))
+        @members ||= JSON.parse(get(member_key))
       end
     end
   end

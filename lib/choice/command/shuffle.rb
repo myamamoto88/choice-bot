@@ -10,7 +10,7 @@ module Choice
 
       def before_members
         @before_members ||= begin
-          _members = store.get(member_key)
+          _members = get(member_key)
           if _members.blank?
             []
           else
